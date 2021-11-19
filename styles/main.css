@@ -1,0 +1,81 @@
+html, body{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    background: wheat;
+}
+
+
+
+/*Le player*/
+.mainContainer{
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    max-width: 800px;
+    max-height: 720px;
+}
+
+/*Zone d'info*/
+.informationZone{
+    position: relative;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 13%;
+    border-top: solid 2px green;
+}
+
+/*Zone de jeu*/
+.gameArea{
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 16%;
+    z-index: 0;
+    overflow: hidden;
+    background-color: black;
+}
+/*player*/
+.hero{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 47%;
+    top: 44%;
+    transform-origin: center center;
+    transform: rotate(0deg);
+    pointer-events: none;
+    z-index: 2;
+}
+/*Le projectile*/
+.bullet{
+    position: absolute;
+    transform-origin: center center;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: solid 1px gainsboro;
+    background: orangered;
+    pointer-events: none;
+    z-index: 1;
+    box-shadow:
+            inset 0 0 5px white,
+            inset 2px 0 8px #ff00ff,
+            inset -2px 0 8px #00ffff,
+            inset 2px 0 30px #ff00ff;,
+            inset -2px 0 30px #00ffff,
+            0 0 5px white,
+            -1px 0 8px #ff00ff,
+            1px 0 8px #00ffff
+
+}
+.enemi{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transform-origin: center center;
+    pointer-events: none;
+    z-index: 2;
+}
