@@ -1,6 +1,6 @@
 //Creer les vague d'enemis
 function createWave(){
-    let currentLevel = 1;
+    let currentLevel = 0;
     //nombre d'enemis a generer par vague
     let number = 10 + currentLevel;
     //Zone de jeu
@@ -21,8 +21,8 @@ function createWave(){
     //dimension de la zone d'aparaition possible
 
     let coords = {
-        left: target.offset.left + (size.width / 4) - offsets.left,
-        top: target.offset.top + (size.height / 4) - offsets.top
+        left: target.offset().left + (size.width / 4) - offsets.left,
+        top: target.offset().top + (size.height / 4) - offsets.top
     }
     //Boucle de creation des vagues d'enemis un a un
     for (let t = 0; t < number; t++){
